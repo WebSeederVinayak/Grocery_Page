@@ -20,11 +20,11 @@ function HomePage() {
         {/* Icons and Buttons */}
         <div className="flex items-center space-x-13">
           <div className="relative">
-            <button className="text-gray-900 hover:text-orange-500 text-2xl">🛒</button>
+            <button className="text-gray-900 hover:text-orange-500 text-2xl">🛍️</button>
             {/* <div className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-1">•</div> */}
           </div>
           <a href="#" className="text-orange-500 text-lg hover:underline">Sign In</a>
-          <a href="#" className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">Sign Up</a>
+          <a href="#" className="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">Sign Up</a>
         </div>
       </header>
 
@@ -80,7 +80,7 @@ function HomePage() {
         {/* Image of person */}
         <div className="relative w-full md:w-1/2 flex justify-center h-[500px] bg-transparent">
         <img
-            src="./src/images/boy.png"
+            src="/images/boy.png"
             alt="Person with groceries"
             className="w-[350px] h-full object-cover"
         />
@@ -97,7 +97,7 @@ function HomePage() {
                 {/* Product Card: Spinach */}
                 <div className="bg-orange-50 p-5 rounded-4xl shadow hover:shadow-lg transition w-full border border-black">
                 <img
-                    src="./src/images/spinach.png"
+                    src="/images/spinach.png"
                     alt="Fresh Spinach"
                     className="w-full h-32 object-cover rounded mb-3"
                 />
@@ -110,7 +110,7 @@ function HomePage() {
                 {/* Product Card: Carrots */}
                 <div className="bg-orange-50 p-4 rounded-4xl shadow hover:shadow-lg transition w-full border border-black">
                 <img
-                    src="./src/images/carrot.png"
+                    src="/images/carrot.png"
                     alt="Fresh Carrots"
                     className="w-full h-32 object-cover rounded mb-3"
                 />

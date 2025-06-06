@@ -7,7 +7,7 @@ function HomePage() {
       {/* Navbar */}
       <header className="flex items-center justify-between px-8 py-4 bg-white shadow-md">
         <div className="flex items-center space-x-2">
-          <h1 className="text-3xl font-bold text-orange-500">Finest<span className="text-yellow-500">Mart</span> </h1>
+          <h1 className="text-3xl font-bold text-orange-500">Grocer<span className="text-yellow-500">Mart</span> </h1>
         </div>
         <nav className="hidden md:flex space-x-15 text-lg text-gray-400 font-medium">
           <a href="#" className="text-orange-500 border-b-2 border-orange-500 pb-1">Home</a>
@@ -48,7 +48,7 @@ function HomePage() {
               placeholder="Search here"
               className="w-3/4 px-4 py-3 rounded-l-lg text-gray-600 text-lg bg-gray-100  focus:outline-none focus:ring-2 focus:ring-orange-300"
             />
-            <button className="bg-orange-500 hover:bg-orange-600 px-4 py-3 rounded-r-lg text-white font-semibold transition">
+            <button className="bg-yellow-500 hover:bg-orange-600 px-4 py-3 rounded-r-lg text-white font-semibold transition">
               🔍
             </button>
           </div>
@@ -56,19 +56,19 @@ function HomePage() {
           {/* Features */}
           <div className="flex flex-wrap gap-4 mt-6">
             <div className="flex items-center space-x-2">
-              <div className="text-green-500">✔️</div>
+              <div className="text-green-500">✅</div>
               <span className="text-gray-400 text-lg">Fresh Vegetables</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="text-green-500">✔️</div>
+              <div className="text-green-500">✅</div>
               <span className="text-gray-400 text-lg">100% Guarantee</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="text-green-500">✔️</div>
+              <div className="text-green-500">✅</div>
               <span className="text-gray-400 text-lg">Cash on Delivery</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="text-green-500">✔️</div>
+              <div className="text-green-500">✅</div>
               <span className="text-gray-400 text-lg">Fast Delivery</span>
             </div>
           </div>
@@ -132,7 +132,7 @@ function HomePage() {
         {/* Dairy Products */}
         <div className="flex flex-col items-start text-left max-w-xs">
             <div className="w-16 h-16  flex items-center justify-center mb-8">
-            <span className='text-5xl'>🥛</span>
+            <span className='text-5xl'>🧈</span>
             </div>
             <h4 className="font-semibold text-2xl mb-2">Dairy Products</h4>
             <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -140,7 +140,7 @@ function HomePage() {
         {/* Vegetables & Fruits */}
         <div className="flex flex-col items-start text-left max-w-xs">
         <div className="w-16 h-16 flex items-center justify-center mb-8">
-            <span className='text-5xl'>🥕</span>
+            <span className='text-5xl'>🫛</span>
         </div>
         <h4 className="font-semibold text-2xl mb-2">Vegetables & Fruits</h4>
         <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -149,7 +149,7 @@ function HomePage() {
         {/* Spices & Seasonings */}
         <div className="flex flex-col items-start text-left max-w-xs">
         <div className="w-16 h-16 flex items-center justify-center mb-8">
-            <span className='text-5xl'>🌶️</span>
+            <span className='text-5xl'>🧂</span>
         </div>
         <h4 className="font-semibold text-2xl mb-2">Spices & Seasonings</h4>
         <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -158,7 +158,7 @@ function HomePage() {
         {/* Honey */}
         <div className="flex flex-col items-start text-left max-w-xs">
         <div className="w-16 h-16 flex items-center justify-center mb-8">
-            <span className='text-5xl'>🍯</span>
+            <span className='text-5xl'>🐝</span>
         </div>
         <h4 className="font-semibold text-2xl mb-2">Honey</h4>
         <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

@@ -2,6 +2,13 @@
 import React from 'react';
 
 function HomePage() {
+  // Dummy functions for clicks, replace with actual logic later
+  const handleSignInClick = () => console.log('Sign In clicked');
+  const handleSignUpClick = () => console.log('Sign Up clicked');
+  const handleSearch = () => console.log('Search performed');
+  const handleCategoryClick = (categoryName) => console.log(`Category clicked: ${categoryName}`);
+  const handleProductClick = (productName) => console.log(`Product clicked: ${productName}`);
+
   return (
     <div className="min-h-screen bg-gray-50 font-sans pt-0 pl-30 pr-30">
       {/* Navbar */}
@@ -23,12 +30,10 @@ function HomePage() {
             <button className="text-gray-900 hover:text-orange-500 text-2xl">🛍️</button>
             {/* <div className="absolute top-0 right-0 bg-red-500 text-white rounded-full text-xs px-1">•</div> */}
           </div>
-          <a href="#" className="text-orange-500 text-lg hover:underline">Sign In</a>
-          <a href="#" className="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">Sign Up</a>
+          <a href="#" onClick={handleSignInClick} className="text-orange-500 text-lg hover:underline">Sign In</a>
+          <a href="#" onClick={handleSignUpClick} className="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">Sign Up</a>
         </div>
       </header>
-
-
 
       {/* Main Hero Section */}
       <section className="flex flex-col md:flex-row items-center md:justify-between px-2 py-5 bg-white">
@@ -46,9 +51,9 @@ function HomePage() {
             <input
               type="text"
               placeholder="Search here"
-              className="w-3/4 px-4 py-3 rounded-l-lg text-gray-600 text-lg bg-gray-100  focus:outline-none focus:ring-2 focus:ring-orange-300"
+              className="w-3/4 px-4 py-3 rounded-l-lg text-gray-600 text-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-300"
             />
-            <button className="bg-yellow-500 hover:bg-orange-600 px-4 py-3 rounded-r-lg text-white font-semibold transition">
+            <button onClick={handleSearch} className="bg-yellow-500 hover:bg-orange-600 px-4 py-3 rounded-r-lg text-white font-semibold transition">
               🔍
             </button>
           </div>
@@ -74,9 +79,6 @@ function HomePage() {
           </div>
         </div>
 
-
-
-
         {/* Image of person */}
         <div className="relative w-full md:w-1/2 flex justify-center h-[500px] bg-transparent">
         <img
@@ -86,16 +88,11 @@ function HomePage() {
         />
         </div>
 
-
-
-
-
-
-        {/* Right Section  */}
+        {/* Right Section */}
         <div className="max-w-md mx-auto p-6">
             <div className="flex flex-col gap-6">
                 {/* Product Card: Spinach */}
-                <div className="bg-orange-50 p-5 rounded-4xl shadow hover:shadow-lg transition w-full border border-black">
+                <div onClick={() => handleProductClick('Fresh Spinach')} className="bg-orange-50 p-5 rounded-4xl shadow hover:shadow-lg transition w-full border border-black transform hover:scale-105 cursor-pointer"> {/* Added hover effect and cursor */}
                 <img
                     src="/images/spinach.png"
                     alt="Fresh Spinach"
@@ -108,7 +105,7 @@ function HomePage() {
                 </div>
 
                 {/* Product Card: Carrots */}
-                <div className="bg-orange-50 p-4 rounded-4xl shadow hover:shadow-lg transition w-full border border-black">
+                <div onClick={() => handleProductClick('Fresh Carrots')} className="bg-orange-50 p-4 rounded-4xl shadow hover:shadow-lg transition w-full border border-black transform hover:scale-105 cursor-pointer"> {/* Added hover effect and cursor */}
                 <img
                     src="/images/carrot.png"
                     alt="Fresh Carrots"
@@ -121,58 +118,53 @@ function HomePage() {
                 </div>
             </div>
         </div>
-
-
       </section>
 
-      
-
-      {/* Features icons section */}
-      <section className="flex justify-around py-12 bg-white pl-10">
+      {/* Features icons section - Converted to buttons */}
+      <section className="flex flex-col md:flex-row justify-around py-12 bg-white pl-10">
         {/* Dairy Products */}
-        <div className="flex flex-col items-start text-left max-w-xs">
-            <div className="w-16 h-16  flex items-center justify-center mb-8">
-            <span className='text-5xl'>🧈</span>
+        <button onClick={() => handleCategoryClick('Dairy Products')} className="flex flex-col items-center p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-center w-full md:w-1/5 my-2 md:my-0 border border-gray-200 hover:bg-gray-100">
+            <div className="w-16 h-16 flex items-center justify-center mb-8">
+                <span className='text-5xl'>🧈</span>
             </div>
-            <h4 className="font-semibold text-2xl mb-2">Dairy Products</h4>
+            <h4 className="font-semibold text-2xl mb-2 text-gray-800">Dairy Products</h4>
             <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        </button>
         {/* Vegetables & Fruits */}
-        <div className="flex flex-col items-start text-left max-w-xs">
-        <div className="w-16 h-16 flex items-center justify-center mb-8">
-            <span className='text-5xl'>🫛</span>
-        </div>
-        <h4 className="font-semibold text-2xl mb-2">Vegetables & Fruits</h4>
-        <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        <button onClick={() => handleCategoryClick('Vegetables & Fruits')} className="flex flex-col items-center p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-center w-full md:w-1/5 my-2 md:my-0 border border-gray-200 hover:bg-gray-100">
+            <div className="w-16 h-16 flex items-center justify-center mb-8">
+                <span className='text-5xl'>🫛</span>
+            </div>
+            <h4 className="font-semibold text-2xl mb-2 text-gray-800">Vegetables & Fruits</h4>
+            <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </button>
 
         {/* Spices & Seasonings */}
-        <div className="flex flex-col items-start text-left max-w-xs">
-        <div className="w-16 h-16 flex items-center justify-center mb-8">
-            <span className='text-5xl'>🧂</span>
-        </div>
-        <h4 className="font-semibold text-2xl mb-2">Spices & Seasonings</h4>
-        <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        <button onClick={() => handleCategoryClick('Spices & Seasonings')} className="flex flex-col items-center p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-center w-full md:w-1/5 my-2 md:my-0 border border-gray-200 hover:bg-gray-100">
+            <div className="w-16 h-16 flex items-center justify-center mb-8">
+                <span className='text-5xl'>🧂</span>
+            </div>
+            <h4 className="font-semibold text-2xl mb-2 text-gray-800">Spices & Seasonings</h4>
+            <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </button>
 
         {/* Honey */}
-        <div className="flex flex-col items-start text-left max-w-xs">
-        <div className="w-16 h-16 flex items-center justify-center mb-8">
-            <span className='text-5xl'>🐝</span>
-        </div>
-        <h4 className="font-semibold text-2xl mb-2">Honey</h4>
-        <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        <button onClick={() => handleCategoryClick('Honey')} className="flex flex-col items-center p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-center w-full md:w-1/5 my-2 md:my-0 border border-gray-200 hover:bg-gray-100">
+            <div className="w-16 h-16 flex items-center justify-center mb-8">
+                <span className='text-5xl'>🐝</span>
+            </div>
+            <h4 className="font-semibold text-2xl mb-2 text-gray-800">Honey</h4>
+            <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </button>
 
         {/* Flour */}
-        <div className="flex flex-col items-start text-left max-w-xs">
-        <div className="w-16 h-16 flex items-center justify-center mb-8">
-            <span className='text-5xl'>🌾</span>
-        </div>
-        <h4 className="font-semibold text-2xl mb-2">Flour</h4>
-        <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-
+        <button onClick={() => handleCategoryClick('Flour')} className="flex flex-col items-center p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 text-center w-full md:w-1/5 my-2 md:my-0 border border-gray-200 hover:bg-gray-100">
+            <div className="w-16 h-16 flex items-center justify-center mb-8">
+                <span className='text-5xl'>🌾</span>
+            </div>
+            <h4 className="font-semibold text-2xl mb-2 text-gray-800">Flour</h4>
+            <p className="text-gray-400 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </button>
       </section>
 
     </div>
